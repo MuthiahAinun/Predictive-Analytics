@@ -31,7 +31,7 @@ Yu, H., & Yan, X. (2019). Predicting Stock Price Movements with Machine Learning
 - Menggunakan 5 algoritma regresi, yaitu Linear Regression, Random Forest , Decision Tree, SVR, dan Gradient Boosting.
 - Melakukan evaluasi dengan metrik MSE, R2 Score, MAE, RMSE, dan MAPE untuk membandingkan performa model.
 ---
-## 🔎Data Understanding
+## 1️⃣Data Understanding
 Dataset diambil dari UCI Machine Learning Repository.
 ```sh
 Link = 'https://archive.ics.uci.edu/ml/machine-learning-databases/00312/dow_jones_index.zip'
@@ -41,7 +41,7 @@ Link = 'https://archive.ics.uci.edu/ml/machine-learning-databases/00312/dow_jone
 Dataset yang digunakan dalam proyek ini adalah dataset indeks saham Dow Jones. Dataset ini berisi data historis pergerakan harga saham pada indeks Dow Jones Industrial Average (DJIA), yang merupakan salah satu indeks pasar saham paling berpengaruh di Amerika Serikat.
 ```
 
-### 1️⃣Variabel pada Dow Jones Index Dataset:
+### 🔎Variabel pada Dow Jones Index Dataset:
 - quarter: Kuartal keuangan (1, 2, 3, atau 4).
 - stock: Kode saham perusahaan.
 - date: Tanggal transaksi.
@@ -72,12 +72,15 @@ Dataset yang digunakan dalam proyek ini adalah dataset indeks saham Dow Jones. D
 ```Tujuan penggunaan dataset ini adalah untuk memprediksi harga penutupan saham pada minggu berikutnya berdasarkan data historis tersebut.```
 
 ## 2️⃣Data Preparation
-Teknik data preparation yang dilakukan pada tahap ini meliputi data cleaning, konversi data, encoding, normalisasi, seleksi fitur, dan pembagian data.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
-
+Teknik data preparation yang dilakukan pada tahap ini meliputi:
+```
+1. Data Cleaning : Tahapan ini bertujuan untuk mengecek informasi nilai hilang pada data. Nilai hilang dapat mengganggu proses analisis dan prediksi jika tidak ditangani dengan baik. Pada tahapan ini juga dilakukan Teknik imputasi dengan rata-rata untuk mengisi nilai hilang pada kolom 'percent_change_volume_over_last_wk' dan 'previous_weeks_volume'.
+2. Konversi Data : Simbol dolar ($) pada kolom harga dapat menghambat proses perhitungan sehingga perlu dikonversi menjadi tipe data numerik (float).
+3. Encoding : Encoding diperlukan untuk mengubah data kategorikal menjadi numerik agar dapat digunakan dalam algoritma pembelajaran mesin.
+4. Normalisasi : Normalisasi bertujuan untuk menyamakan skala data numerik agar model dapat belajar secara optimal.
+5. Seleksi Fitur : Seleksi fitur dilakukan untuk mengurangi dimensionalitas dan mempertahankan variabel yang memiliki korelasi tinggi terhadap variabel target. Pada tahap ini, kolom 'date' dihapus karena tidak relevan dalam proses prediksi.
+6. Pembagian Data : Tahapan ini bertujuan untuk membagi data menjadi data latih dan data uji guna menguji performa model secara objektif.
+```
 ## 3️⃣Modeling
 1. Pada tahap modeling, berbagai algoritma regresi digunakan untuk memprediksi harga penutupan saham minggu berikutnya,yaitu:
 - **Linear Regression:**
@@ -105,7 +108,9 @@ Kekurangan: Waktu komputasi yang tinggi pada dataset besar.
 Kelebihan: Akurasi yang tinggi dengan cara menggabungkan model yang lemah secara bertahap.
 Kekurangan: Rentan terhadap overfitting jika parameter tidak diatur dengan baik.
 ```
+---
 > Proses pemodelan dilakukan dengan mengatur parameter default pada masing-masing model. Setelah itu, dilakukan evaluasi menggunakan metrik seperti MSE, R2 Score, MAE, RMSE, dan MAPE. Setelah melakukan perbandingan dari semua model, didapatkan bahwa Linear Regression memiliki performa terbaik dengan nilai MSE terendah (0.0008), R2 tertinggi (0.9992), MAE terendah (0.0189), RMSE terendah (0.0289), dan MAPE terendah (4.44%). Oleh karena itu, model terbaik yang dipilih adalah Linear Regression, karena memberikan akurasi yang tinggi dan interpretasi yang mudah, dibandingkan model lain yang cenderung lebih kompleks dan rentan terhadap overfitting.
+---
 
 ## 4️⃣Evaluation
 
@@ -151,11 +156,12 @@ Random Forest: MSE: 0.0016, R2: 0.9985, MAE: 0.0244, RMSE: 0.0396, MAPE: 13.65%
 SVR: MSE: 0.0196, R2: 0.9808, MAE: 0.0789, RMSE: 0.1398, MAPE: 25.08%
 Gradient Boosting: MSE: 0.0011, R2: 0.9990, MAE: 0.0184, RMSE: 0.0327, MAPE: 11.87%
 ```
+---
 ### Kesimpulan:
 > Model terbaik adalah Linear Regression karena memiliki nilai MSE, MAE, RMSE, dan MAPE terendah serta R2 tertinggi dibandingkan model lainnya. Hal ini menunjukkan bahwa model ini paling akurat dalam memprediksi harga penutupan saham minggu berikutnya.
 
 > Meskipun model Gradient Boosting juga memiliki performa yang mendekati Linear Regression dengan MSE: 0.0011 dan R2: 0.9990, Linear Regression tetap lebih unggul pada beberapa metrik lainnya. Selain itu, Linear Regression juga lebih sederhana dan mudah diinterpretasikan, sehingga menjadi pilihan terbaik.
-
+---
 _Catatan:_
-- Semua detail penjelasan serta tahapan lengkap data preparation sudah ada dalam notebook.
+Semua detail penjelasan setiap tahapan juga sudah ada dalam notebook.
 
