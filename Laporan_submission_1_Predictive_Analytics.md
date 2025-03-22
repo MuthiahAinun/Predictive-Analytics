@@ -4,7 +4,8 @@
 
 ```Prediksi Pergerakan Saham pada Dow Jones Index```
 
-**Latar Belakang:** 
+**Latar Belakang:**
+
 ```Pergerakan saham yang dinamis memerlukan prediksi untuk membantu investor mengambil keputusan. Dengan menganalisis data historis, kita dapat memprediksi pergerakan saham.```
 
 **Referensi:**
