@@ -16,9 +16,9 @@ Yu, H., & Yan, X. (2019). Predicting Stock Price Movements with Machine Learning
 ---
 
 ## 🎯Business Understanding
-
-### Problem Statements:
 ---
+### Problem Statements:
+
 - Bagaimana memprediksi perubahan harga saham berdasarkan data historis?
 - Algoritma regresi mana yang paling akurat untuk memprediksi pergerakan harga saham?
 
