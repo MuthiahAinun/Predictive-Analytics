@@ -43,6 +43,7 @@ Model Linear Regression berhasil memberikan hasil prediksi terbaik dibandingkan 
 ```
 ├── Laporan_submission_1_Predictive_Analytics.md                             # Project report and documentation
 ├── Proyek_Machine_Learning_Predictive_Analytics_Tsamarah_Muthi'ah_A.ipynb   # Jupyter notebook containing the code and analysis
+├── Proyek_Machine_Learning_Predictive_Analytics_Tsamarah_Muthi'ah_A.py      # Script Python
 ├── README.md                                                                # Project overview and instructions
 ├── dow_jones_index.csv                                                      # Dataset containing historical Dow Jones index data
 ├── requirements.txt                                                         # List of required libraries and dependencies
