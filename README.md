@@ -1,21 +1,21 @@
 # 💡Predictive-Analytics - Dow Jones Index Prediction
 ---
 ## Project Overview
-Proyek ini bertujuan untuk memprediksi perubahan harga saham pada indeks Dow Jones menggunakan algoritma regresi. Dengan memanfaatkan data historis, model akan melakukan prediksi harga penutupan saham pada minggu berikutnya.
+Proyek ini bertujuan untuk memprediksi harga penutupan saham minggu berikutnya pada indeks Dow Jones menggunakan algoritma regresi. Dengan memanfaatkan data historis, model akan melakukan prediksi harga penutupan saham pada minggu berikutnya.
 
 ---
 ---
 ## Problem Statements
-1. Bagaimana memprediksi perubahan harga saham berdasarkan data historis?
-2. Model mana yang paling akurat untuk prediksi pergerakan saham?
+1. Bagaimana cara memprediksi harga penutupan saham minggu berikutnya secara akurat berdasarkan data historis untuk membantu investor dalam pengambilan keputusan?
+2. Algoritma regresi mana yang memberikan hasil paling optimal dalam memprediksi harga saham berdasarkan metrik evaluasi yang relevan?
 
 ## Goals
-1. Menghasilkan model prediksi harga saham dengan akurasi tinggi.
-2. Mengidentifikasi model terbaik berdasarkan metrik evaluasi.
+1. Mengembangkan model prediksi harga penutupan saham yang dapat memberikan estimasi yang cukup akurat untuk membantu investor dalam pengambilan keputusan.
+2. Mengevaluasi performa berbagai algoritma regresi untuk menentukan model terbaik berdasarkan metrik evaluasi yang sesuai.
 ---
 ## Dataset
 ---
-> Dataset yang digunakan adalah data historis indeks Dow Jones, yang berisi informasi harga saham mingguan dari beberapa perusahaan besar. Fitur yang digunakan meliputi harga pembukaan (Open), harga penutupan (Close), volume transaksi (Volume), dan lainnya.
+> Dataset yang digunakan adalah data historis indeks Dow Jones, yang berisi informasi harga saham mingguan dari beberapa perusahaan besar. Fitur yang digunakan meliputi harga pembukaan (Open), harga penutupan (Close), volume transaksi (Volume), dan lainnya. Data memiliki 750 baris dan 16 kolom, dengan dua kolom yang memiliki 30 nilai hilang, yaitu pada Kolom percent_change_volume_over_last_wk dan Kolom previous_weeks_volume.
 ---
 
 ## Algorithms Used
