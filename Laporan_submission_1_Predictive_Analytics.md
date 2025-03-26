@@ -19,28 +19,28 @@ Yu, H., & Yan, X. (2019). Predicting Stock Price Movements with Machine Learning
 ---
 ### Problem Statements:
 
-- Bagaimana memprediksi perubahan harga saham berdasarkan data historis?
-- Algoritma regresi mana yang paling akurat untuk memprediksi pergerakan harga saham?
+- Bagaimana cara memprediksi harga penutupan saham minggu berikutnya secara akurat berdasarkan data historis untuk membantu investor dalam pengambilan keputusan?
+- Algoritma regresi mana yang memberikan hasil paling optimal dalam memprediksi harga saham berdasarkan metrik evaluasi yang relevan?
 
 ### Goals:
 
-- Menghasilkan model prediksi harga saham dengan akurasi tinggi menggunakan berbagai algoritma regresi.
-- Memilih model terbaik berdasarkan metrik evaluasi dan mempertimbangkan kelebihan serta kekurangannya.
+- Mengembangkan model prediksi harga penutupan saham yang dapat memberikan estimasi yang cukup akurat untuk membantu investor dalam pengambilan keputusan.
+- Mengevaluasi performa berbagai algoritma regresi untuk menentukan model terbaik berdasarkan metrik evaluasi yang sesuai.
 
 ### Solution Statement:
 
 - Menggunakan 5 algoritma regresi, yaitu Linear Regression, Random Forest , Decision Tree, SVR, dan Gradient Boosting.
 - Melakukan evaluasi dengan metrik MSE, R2 Score, MAE, RMSE, dan MAPE untuk membandingkan performa model.
+- Memilih model terbaik berdasarkan keseimbangan antara akurasi prediksi dan interpretabilitas.
 ---
 ## 1️⃣Data Understanding
-Dataset diambil dari UCI Machine Learning Repository.
-```sh
-Link = 'https://archive.ics.uci.edu/ml/machine-learning-databases/00312/dow_jones_index.zip'
-```
-
 ```
 Dataset yang digunakan dalam proyek ini adalah dataset indeks saham Dow Jones. Dataset ini berisi data historis pergerakan harga saham pada indeks Dow Jones Industrial Average (DJIA), yang merupakan salah satu indeks pasar saham paling berpengaruh di Amerika Serikat.
 ```
+Dataset diambil dari UCI Machine Learning Repository.
+[Download Dataset](https://archive.ics.uci.edu/ml/machine-learning databases/00312/dow_jones_index.zip)
+
+Data memiliki 750 baris dan 16 kolom, dengan dua kolom yang memiliki 30 nilai hilang, yaitu pada Kolom percent_change_volume_over_last_wk dan Kolom previous_weeks_volume.
 
 ### 🔎Variabel pada Dow Jones Index Dataset:
 - quarter: Kuartal keuangan (1, 2, 3, atau 4).
@@ -88,29 +88,39 @@ Teknik data preparation yang dilakukan pada tahap ini meliputi:
 ```
 Kelebihan: Sederhana, mudah diinterpretasikan, dan efektif jika hubungan antara variabel bersifat linear.
 Kekurangan: Kurang akurat jika terdapat hubungan non-linear antara variabel.
+
+📌 Cara Kerja: Linear Regression mencoba mencari garis lurus terbaik yang bisa mewakili hubungan antara variabel input (X) dan output (Y). Model ini menghitung kemiringan garis (koefisien) sehingga meminimalkan selisih antara nilai prediksi dan nilai sebenarnya.
 ```
 - **Decision Tree Regressor:**
 ```
 Kelebihan: Mampu menangani data non-linear, mudah diinterpretasikan.
 Kekurangan: Rentan terhadap overfitting terutama pada data dengan banyak fitur.
+
+📌 Cara Kerja: Decision Tree Regressor adalah model berbasis pohon keputusan, di mana data dibagi menjadi beberapa subset berdasarkan aturan keputusan tertentu hingga mencapai kondisi akhir (leaf node). Model ini bekerja dengan membangun pohon yang membagi data ke dalam kelompok yang lebih homogen, meminimalkan kesalahan dengan menghitung Mean Squared Error (MSE) pada setiap percabangan.
 ```
 - **Random Forest Regressor:**
 ```
 Kelebihan: Mengurangi overfitting dibandingkan Decision Tree dengan menggabungkan banyak pohon keputusan.
 Kekurangan: Lebih kompleks dan membutuhkan lebih banyak sumber daya komputasi.
+
+📌 Cara Kerja: Random Forest adalah ensemble model yang terdiri dari banyak Decision Tree. Model ini membuat prediksi dengan menggabungkan hasil dari banyak pohon keputusan untuk mengurangi overfitting dan meningkatkan akurasi. Setiap pohon dibangun menggunakan subset acak dari data (Bootstrap Sampling), dan hasil akhirnya diperoleh dengan rata-rata prediksi dari semua pohon.
 ```
 - **Support Vector Regressor (SVR):**
 ```
 Kelebihan: Efektif dalam data berdimensi tinggi dan robust terhadap outlier
 Kekurangan: Waktu komputasi yang tinggi pada dataset besar.
+
+📌 Cara Kerja: Support Vector Regressor (SVR) menggunakan prinsip Support Vector Machines (SVM) untuk melakukan regresi. Model ini bekerja dengan mencari hyperplane optimal yang dapat meminimalkan kesalahan dalam margin tertentu (disebut sebagai epsilon-tube).
 ```
 - **Gradient Boosting Regressor:**
 ```
 Kelebihan: Akurasi yang tinggi dengan cara menggabungkan model yang lemah secara bertahap.
 Kekurangan: Rentan terhadap overfitting jika parameter tidak diatur dengan baik.
+
+📌 Cara Kerja: Gradient Boosting adalah model berbasis boosting, di mana setiap pohon baru berusaha memperbaiki kesalahan dari pohon sebelumnya. Model ini menggunakan gradient descent untuk meminimalkan kesalahan prediksi secara bertahap.
 ```
 ---
-> Proses pemodelan dilakukan dengan mengatur parameter default pada masing-masing model. Setelah itu, dilakukan evaluasi menggunakan metrik seperti MSE, R2 Score, MAE, RMSE, dan MAPE. Setelah melakukan perbandingan dari semua model, didapatkan bahwa Linear Regression memiliki performa terbaik dengan nilai MSE terendah (0.0008), R2 tertinggi (0.9992), MAE terendah (0.0189), RMSE terendah (0.0289), dan MAPE terendah (4.44%). Oleh karena itu, model terbaik yang dipilih adalah Linear Regression, karena memberikan akurasi yang tinggi dan interpretasi yang mudah, dibandingkan model lain yang cenderung lebih kompleks dan rentan terhadap overfitting.
+> **Proses pemodelan dilakukan dengan menggunakan parameter default pada masing-masing model.** Setelah itu, dilakukan evaluasi menggunakan metrik seperti MSE, R2 Score, MAE, RMSE, dan MAPE.
 ---
 
 ## 4️⃣Evaluation
@@ -157,9 +167,28 @@ Random Forest: MSE: 0.0016, R2: 0.9985, MAE: 0.0244, RMSE: 0.0396, MAPE: 13.65%
 SVR: MSE: 0.0196, R2: 0.9808, MAE: 0.0789, RMSE: 0.1398, MAPE: 25.08%
 Gradient Boosting: MSE: 0.0011, R2: 0.9990, MAE: 0.0184, RMSE: 0.0327, MAPE: 11.87%
 ```
+
+**### Analisis Dampak terhadap Business Understanding:**
+
+**Apakah model menjawab Problem Statement?**
+```
+1. Model yang dikembangkan mampu memberikan prediksi harga penutupan saham minggu berikutnya.
+2. Algoritma Linear Regression dan Gradient Boosting menunjukkan performa terbaik berdasarkan evaluasi metrik.
+```
+**Apakah tujuan telah tercapai?**
+```
+1. Model prediksi telah dikembangkan dan diuji dengan berbagai algoritma.
+2. Model terbaik dipilih berdasarkan evaluasi metrik yang relevan.
+```
+**Apakah solusi yang direncanakan berdampak?**
+```
+1. Linear Regression menunjukkan performa terbaik dengan MSE terendah (0.0008), R2 tertinggi (0.9992), dan MAPE terendah (4.44%).
+Gradient Boosting juga memiliki performa yang hampir setara, tetapi lebih kompleks dibandingkan 2. Linear Regression.
+3. Decision Tree dan SVR memiliki MAPE yang cukup tinggi (>20%), sehingga kurang cocok untuk prediksi harga saham.
+```
 ---
 ### Kesimpulan:
-> Model terbaik adalah Linear Regression karena memiliki nilai MSE, MAE, RMSE, dan MAPE terendah serta R2 tertinggi dibandingkan model lainnya. Hal ini menunjukkan bahwa model ini paling akurat dalam memprediksi harga penutupan saham minggu berikutnya.
+> Model terbaik berdasarkan evaluasi adalah **Linear Regression**, karena memiliki keseimbangan terbaik antara akurasi dan interpretabilitas dengan nilai error terendah serta R2 Score tertinggi. Hal ini menunjukkan bahwa model ini paling akurat dalam memprediksi harga penutupan saham minggu berikutnya.
 
 > Meskipun model Gradient Boosting juga memiliki performa yang mendekati Linear Regression dengan MSE: 0.0011 dan R2: 0.9990, Linear Regression tetap lebih unggul pada beberapa metrik lainnya. Selain itu, Linear Regression juga lebih sederhana dan mudah diinterpretasikan, sehingga menjadi pilihan terbaik.
 ---
