@@ -169,23 +169,23 @@ SVR: MSE: 0.0196, R2: 0.9808, MAE: 0.0789, RMSE: 0.1398, MAPE: 25.08%
 Gradient Boosting: MSE: 0.0011, R2: 0.9990, MAE: 0.0184, RMSE: 0.0327, MAPE: 11.87%
 ```
 
-**### Analisis Dampak terhadap Business Understanding:**
+### **Analisis Dampak terhadap Business Understanding:**
 
 **Apakah model menjawab Problem Statement?**
 ```
-1. Model yang dikembangkan mampu memberikan prediksi harga penutupan saham minggu berikutnya.
-2. Algoritma Linear Regression dan Gradient Boosting menunjukkan performa terbaik berdasarkan evaluasi metrik.
+1. Model yang dikembangkan mampu memberikan prediksi harga penutupan saham untuk membantu investor dalam pengambilan keputusan.
+2. Algoritma Linear Regression dan Gradient Boosting menunjukkan performa terbaik berdasarkan evaluasi metrik, hal ini dapat memberikan prediksi yang lebih akurat untuk mendukung strategi investasi.
 ```
 **Apakah tujuan telah tercapai?**
 ```
-1. Model prediksi telah dikembangkan dan diuji dengan berbagai algoritma.
-2. Model terbaik dipilih berdasarkan evaluasi metrik yang relevan.
+1. Model prediksi telah dikembangkan dan diuji dengan berbagai algoritma regresi.
+2.  Model terbaik telah dipilih berdasarkan keseimbangan antara akurasi dan kemudahan interpretasi, sehingga dapat digunakan oleh investor untuk mengidentifikasi peluang pasar.
 ```
 **Apakah solusi yang direncanakan berdampak?**
 ```
-1. Linear Regression menunjukkan performa terbaik dengan MSE terendah (0.0008), R2 tertinggi (0.9992), dan MAPE terendah (4.44%).
-Gradient Boosting juga memiliki performa yang hampir setara, tetapi lebih kompleks dibandingkan 2. Linear Regression.
-3. Decision Tree dan SVR memiliki MAPE yang cukup tinggi (>20%), sehingga kurang cocok untuk prediksi harga saham.
+1. Linear Regression menunjukkan performa terbaik dengan MSE terendah (0.0008), R² tertinggi (0.9992), dan MAPE terendah (4.44%), memberikan perkiraan harga yang dapat membantu investor membuat keputusan yang lebih terinformasi.
+2. Gradient Boosting juga memberikan hasil yang kompetitif, meskipun lebih kompleks dalam interpretasi, sehingga lebih cocok bagi investor atau perusahaan yang memiliki akses ke analisis berbasis machine learning.
+3. Decision Tree dan SVR memiliki MAPE yang cukup tinggi (>20%), sehingga kurang dapat diandalkan dalam strategi investasi yang memerlukan prediksi akurat.
 ```
 ---
 ### Kesimpulan:
