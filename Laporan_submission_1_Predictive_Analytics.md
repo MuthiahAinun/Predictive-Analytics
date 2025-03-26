@@ -19,13 +19,13 @@ Yu, H., & Yan, X. (2019). Predicting Stock Price Movements with Machine Learning
 ---
 ### Problem Statements:
 
-- Bagaimana cara memprediksi harga penutupan saham minggu berikutnya secara akurat berdasarkan data historis untuk membantu investor dalam pengambilan keputusan?
-- Algoritma regresi mana yang memberikan hasil paling optimal dalam memprediksi harga saham berdasarkan metrik evaluasi yang relevan?
+- Bagaimana cara menyediakan prediksi harga penutupan saham yang akurat untuk membantu investor dalam mengoptimalkan strategi investasi dan meminimalkan risiko kerugian?
+- Bagaimana memilih model prediksi yang dapat memberikan keseimbangan antara akurasi dan interpretabilitas sehingga dapat diandalkan dalam pengambilan keputusan bisnis?
 
 ### Goals:
 
-- Mengembangkan model prediksi harga penutupan saham yang dapat memberikan estimasi yang cukup akurat untuk membantu investor dalam pengambilan keputusan.
-- Mengevaluasi performa berbagai algoritma regresi untuk menentukan model terbaik berdasarkan metrik evaluasi yang sesuai.
+- Mengembangkan model prediksi harga saham yang dapat membantu investor dalam mengidentifikasi peluang investasi yang menguntungkan dan mengurangi ketidakpastian pasar.
+- Membandingkan performa berbagai algoritma regresi untuk menemukan model yang tidak hanya akurat tetapi juga mudah dipahami oleh investor dalam konteks pengambilan keputusan keuangan.
 
 ### Solution Statement:
 
