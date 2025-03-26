@@ -39,7 +39,7 @@ Dataset yang digunakan dalam proyek ini adalah dataset indeks saham Dow Jones. D
 ```
 Dataset diambil dari UCI Machine Learning Repository.
 
-[Download Dataset](https://archive.ics.uci.edu/ml/machine-learning databases/00312/dow_jones_index.zip)
+[Download Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/00312/dow_jones_index.zip)
 
 Data memiliki 750 baris dan 16 kolom, dengan dua kolom yang memiliki 30 nilai hilang, yaitu pada Kolom percent_change_volume_over_last_wk dan Kolom previous_weeks_volume.
 
