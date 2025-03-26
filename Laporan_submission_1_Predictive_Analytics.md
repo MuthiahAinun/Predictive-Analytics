@@ -38,6 +38,7 @@ Yu, H., & Yan, X. (2019). Predicting Stock Price Movements with Machine Learning
 Dataset yang digunakan dalam proyek ini adalah dataset indeks saham Dow Jones. Dataset ini berisi data historis pergerakan harga saham pada indeks Dow Jones Industrial Average (DJIA), yang merupakan salah satu indeks pasar saham paling berpengaruh di Amerika Serikat.
 ```
 Dataset diambil dari UCI Machine Learning Repository.
+
 [Download Dataset](https://archive.ics.uci.edu/ml/machine-learning databases/00312/dow_jones_index.zip)
 
 Data memiliki 750 baris dan 16 kolom, dengan dua kolom yang memiliki 30 nilai hilang, yaitu pada Kolom percent_change_volume_over_last_wk dan Kolom previous_weeks_volume.
