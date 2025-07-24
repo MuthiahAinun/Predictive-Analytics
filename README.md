@@ -1,21 +1,22 @@
-# 💡Predictive-Analytics - Dow Jones Index Prediction
+# 💡Predictive Analytics - Dow Jones Index Prediction
 ---
 ## Project Overview
-Proyek ini bertujuan untuk memprediksi harga penutupan saham minggu berikutnya pada indeks Dow Jones menggunakan algoritma regresi. Dengan memanfaatkan data historis, model akan melakukan prediksi harga penutupan saham pada minggu berikutnya.
+This project aims to predict the closing stock prices for the following week on the Dow Jones Index using regression algorithms. By leveraging historical data, the model will forecast next week’s stock closing prices.
 
----
 ---
 ## Problem Statements
-1. Bagaimana cara memprediksi harga penutupan saham minggu berikutnya secara akurat berdasarkan data historis untuk membantu investor dalam pengambilan keputusan?
-2. Algoritma regresi mana yang memberikan hasil paling optimal dalam memprediksi harga saham berdasarkan metrik evaluasi yang relevan?
+1. How can we accurately predict next week's stock closing prices based on historical data to assist investors in making informed decisions?
+2. Which regression algorithm provides the most optimal results in stock price prediction based on relevant evaluation metrics?
 
 ## Goals
-1. Mengembangkan model prediksi harga penutupan saham yang dapat memberikan estimasi yang cukup akurat untuk membantu investor dalam pengambilan keputusan.
-2. Mengevaluasi performa berbagai algoritma regresi untuk menentukan model terbaik berdasarkan metrik evaluasi yang sesuai.
+1. Develop a predictive model for stock closing prices that can provide sufficiently accurate estimates to support investor decision-making.
+2. Evaluate the performance of various regression algorithms to determine the best model based on appropriate evaluation metrics.
+
 ---
 ## Dataset
 ---
-> Dataset yang digunakan adalah data historis indeks Dow Jones, yang berisi informasi harga saham mingguan dari beberapa perusahaan besar. Fitur yang digunakan meliputi harga pembukaan (Open), harga penutupan (Close), volume transaksi (Volume), dan lainnya. Data memiliki 750 baris dan 16 kolom, dengan dua kolom yang memiliki 30 nilai hilang, yaitu pada Kolom percent_change_volume_over_last_wk dan Kolom previous_weeks_volume.
+> The dataset used consists of historical Dow Jones Index data, containing weekly stock price information from several major companies. Features include opening price (Open), closing price (Close), trading volume (Volume), and more. The data has 750 rows and 16 columns, with two columns containing 30 missing values: `percent_change_volume_over_last_wk` and `previous_weeks_volume`.
+
 ---
 
 ## Algorithms Used
@@ -33,20 +34,20 @@ Proyek ini bertujuan untuk memprediksi harga penutupan saham minggu berikutnya p
 5. Mean Absolute Percentage Error (MAPE)
 
 ## Best Model
-Model terbaik adalah **Linear Regression**, dengan nilai MSE terendah (0.0008) dan R2 tertinggi (0.9992), menunjukkan akurasi yang sangat tinggi dalam memprediksi harga saham.
+The best-performing model is **Linear Regression**, with the lowest MSE (0.0008) and the highest R2 score (0.9992), indicating excellent accuracy in stock price prediction.
 
 ## Conclusion
-Model Linear Regression berhasil memberikan hasil prediksi terbaik dibandingkan model lainnya. Model ini dipilih karena akurasinya yang tinggi, kesederhanaannya, dan interpretasi yang mudah.
+The Linear Regression model successfully delivered the most accurate predictions among all tested models. It was chosen due to its high accuracy, simplicity, and ease of interpretation.
 
 ---
 ## 📂Folder Structure
 ```
-├── Laporan_submission_1_Predictive_Analytics.md                             # Project report and documentation
-├── Proyek_Machine_Learning_Predictive_Analytics_Tsamarah_Muthi'ah_A.ipynb   # Jupyter notebook containing the code and analysis
-├── Proyek_Machine_Learning_Predictive_Analytics_Tsamarah_Muthi'ah_A.py      # Script Python
-├── README.md                                                                # Project overview and instructions
-├── dow_jones_index.csv                                                      # Dataset containing historical Dow Jones index data
-├── requirements.txt                                                         # List of required libraries and dependencies
+├── Laporan_submission_1_Predictive_Analytics.md # Project report and documentation
+├── Proyek_Machine_Learning_Predictive_Analytics_Tsamarah_Muthi'ah_A.ipynb # Jupyter notebook containing the code and analysis
+├── Proyek_Machine_Learning_Predictive_Analytics_Tsamarah_Muthi'ah_A.py # Python script
+├── README.md # Project overview and instructions
+├── dow_jones_index.csv # Dataset containing historical Dow Jones index data
+├── requirements.txt # List of required libraries and dependencies
 ```
 
 ## ⚙️Installation
@@ -55,12 +56,11 @@ To install the required libraries, run:
 pip install -r requirements.txt
 ```
 
+
 ## 📌Usage
-1. Run the Jupyter Notebook to preprocess the data and train models.
+1. Run the Jupyter Notebook to preprocess the data and train the models.
 2. Evaluate model performance using the provided metrics.
-3. Compare results and choose the best model.
+3. Compare the results and select the best-performing model.
 
 ## License
 This project is licensed under the MIT License.
-
----
